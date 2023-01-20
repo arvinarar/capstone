@@ -1,6 +1,5 @@
 <script>
 export default {
-  name: 'HomeView',
   setup() {
     let thisWeeksExpenses = 200;
     let thisMonthsExpenses = 1235;
@@ -12,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="container border">
+  <div class="container">
     <div class="row">
       <div class="col">
         <h3 class="textcenter">This Weeks Expenses: {{ thisWeeksExpenses }}</h3>
@@ -21,11 +20,13 @@ export default {
       </div>
     </div>
     <div class="row">
-      <div class="col-auto m-auto">
+      <div class="col-auto m-auto p-auto">
         <button id="button" type="button" class="btn">Show Financial Report</button>
       </div>
-      <div class="col-auto m-auto">
-        <button id="button" type="button" class="btn">Add Expenses</button>
+      <div class="col-auto m-auto p-auto">
+        <button id="button" type="button" class="btn">
+          <RouterLink to="/AddExpenses">Add Expenses</RouterLink>
+        </button>
       </div>
       
       
@@ -34,9 +35,6 @@ export default {
 </template>
 
 <style lang="scss" scope>
-  .textcenter {
-    text-align: center;
-  }
 
   #button {
     border-radius: 10px;
@@ -44,10 +42,16 @@ export default {
     border-color: #394193;
     background-color: #6167A9;
     color: white;
+    font-size: clamp(10px, 3vw, 20px);
 
     &:hover {
       border-color: #6167A9;
       background-color: #394193;
     }
+  }
+
+  a {
+    text-decoration: none !important;
+    color: white !important;
   }
 </style>

@@ -1,0 +1,6 @@
+{
+    "expenses": [
+        { "id": 0, "name": "Bopis", "type": "Food", "date": "1/16/2022", "amount": 20},
+        { "id": 1, "name": "Manyok", "type": "Food", "date": "1/16/2022", "amount": 40}
+    ]
+}
