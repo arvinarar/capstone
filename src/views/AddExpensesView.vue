@@ -1,16 +1,23 @@
 <script>
 import { ref } from "vue"
+import axios from "axios"
 
 export default {
     setup() {
-        const name = ref();
-        const type = ref();
-        const amount = ref();
+        const name = ref()
+        const type = ref()
+        const amount = ref()
         return { name, type, amount }
     },
     methods: {
-        submitExpense() {
-            console.log("Submitted")
+        async submitExpense() {
+            let result = await axios.post("http://localhost:3000/expenses", {
+                name: this.name,
+                type: this.type,
+                date: new Date(),
+                dateString: new Date().toLocaleDateString(),
+                amount: this.amount
+            })
             this.$router.push("/RecentExpenses")
         }
     }

@@ -1,16 +1,12 @@
 <script>
-import { ref } from "vue"
+import getDb from '../composable/getDb'
+
 export default {
   setup() {
-    let thisWeeksExpenses = 200;
-    let thisMonthsExpenses = 1235;
-    let lastMonthsExpenses = 1152;
+    const { expenses, error, thismonthsexpenses, thisweeksexpenses, lastmonthsexpenses,load } = getDb()
+    load()
 
-    const expenses = ref([]);
-    expenses.value.push({"id": 0, "name": "Bopis", "type": "Food", "date": "1/16/2022", "amount": 20});
-    expenses.value.push({ "id": 1, "name": "Manyok", "type": "Food", "date": "1/16/2022", "amount": 40});
-
-    return { thisWeeksExpenses, thisMonthsExpenses, lastMonthsExpenses, expenses }
+    return { expenses, thismonthsexpenses, thisweeksexpenses, lastmonthsexpenses, error }
   }
 }
 </script>
@@ -33,26 +29,20 @@ export default {
           </tr>
         </thead>
         <tbody>
-          <tr v-for ="expense in expenses" :key="expense.id" >
+          <tr v-for ="expense in expenses.slice(0,5)" :key="expense.date" >
             <th>{{ expense.name }}</th>
             <th>{{ expense.type }}</th>
-            <th>{{ expense.name }}</th>
+            <th>{{ expense.dateString }}</th>
             <th>{{ expense.amount }}</th>
           </tr>
-          <!-- <tr>
-            <td>Manyok</td>
-            <td>Food</td>
-            <td>11/5/23</td>
-            <td>40</td>
-          </tr> -->
         </tbody>
       </table>
     </div>
     <div class="row">
       <div class="col">
-        <h3 class="textcenter">This Weeks Expenses: {{ thisWeeksExpenses }}</h3>
-        <h3 class="textcenter">This Months Expenses: {{ thisMonthsExpenses }}</h3>
-        <h3 class="textcenter">Last Weeks Expenses: {{ lastMonthsExpenses }}</h3>
+        <h3 class="textcenter">This Weeks Expenses: {{ thisweeksexpenses }}</h3>
+        <h3 class="textcenter">This Months Expenses: {{ thismonthsexpenses }}</h3>
+        <h3 class="textcenter">Last Months Expenses: {{ lastmonthsexpenses }}</h3>
       </div>
     </div>
     <div class="row">

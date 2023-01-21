@@ -1,0 +1,44 @@
+{
+  "expenses": [
+    {
+      "name": "Gamit",
+      "type": "Misc",
+      "date": "2022-12-21T06:25:37.660Z",
+      "dateString": "12/21/2022",
+      "amount": 5000,
+      "id": 5
+    },
+    {
+      "name": "Bopis",
+      "type": "Food",
+      "date": "2023-01-21T06:25:37.660Z",
+      "dateString": "1/21/2023",
+      "amount": 123,
+      "id": 4
+    },
+    {
+      "name": "Food",
+      "type": "Rent",
+      "date": "2023-01-13T06:31:55.926Z",
+      "dateString": "1/13/2023",
+      "amount": 5,
+      "id": 3
+    },
+    {
+      "name": "Maed",
+      "type": "Rent",
+      "date": "2023-01-21T06:34:39.276Z",
+      "dateString": "1/21/2023",
+      "amount": 500,
+      "id": 2
+    },
+    {
+      "name": "Isaw",
+      "type": "Food",
+      "date": "2023-01-12T06:34:39.276Z",
+      "dateString": "1/12/2023",
+      "amount": 372,
+      "id": 1
+    }
+  ]
+}
