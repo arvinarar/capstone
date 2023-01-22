@@ -18,7 +18,12 @@ const router = createRouter({
       path: '/RecentExpenses',
       name: 'RecentExpenses',
       component: () => import('../views/RecentExpensesView.vue')
-    }
+    },
+    {
+      path: '/FinancialStatement',
+      name: 'FinancialStatement',
+      component: () => import('../views/FinancialStatementView.vue')
+    },
   ]
 })
 

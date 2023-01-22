@@ -29,7 +29,7 @@ export default {
           </tr>
         </thead>
         <tbody>
-          <tr v-for ="expense in expenses.slice(0,5)" :key="expense.date" >
+          <tr v-for ="expense in expenses.slice(0,5)" :key="expense.id" >
             <th>{{ expense.name }}</th>
             <th>{{ expense.type }}</th>
             <th>{{ expense.dateString }}</th>
@@ -52,7 +52,9 @@ export default {
         </button>
       </div>
       <div class="col-auto m-auto p-auto">
-        <button id="button" type="button" class="btn">Show Financial Report</button>
+        <button id="button" type="button" class="btn">
+          <RouterLink to="/FinancialStatement">Show Financial Report</RouterLink>
+        </button>
       </div>
       
       

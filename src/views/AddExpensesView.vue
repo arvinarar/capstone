@@ -1,5 +1,6 @@
 <script>
 import { ref } from "vue"
+import Datepicker from 'vue3-datepicker'
 import axios from "axios"
 
 export default {
@@ -7,15 +8,19 @@ export default {
         const name = ref()
         const type = ref()
         const amount = ref()
-        return { name, type, amount }
+        const date = ref(new Date())
+        return { name, type, amount, date }
+    },
+    components: {
+        Datepicker
     },
     methods: {
         async submitExpense() {
             let result = await axios.post("http://localhost:3000/expenses", {
                 name: this.name,
                 type: this.type,
-                date: new Date(),
-                dateString: new Date().toLocaleDateString(),
+                date: this.date,
+                dateString: this.date.toLocaleDateString(),
                 amount: this.amount
             })
             this.$router.push("/RecentExpenses")
@@ -46,10 +51,11 @@ export default {
                 </div>
                 <div class="col-md-8">
                     <select class="form-select" required v-model="type">
-                        <option value="Rent">Rent</option>
+                        <option value="Rent">Rent/Bills</option>
                         <option value="Food">Food</option>
-                        <option value="Misc.">Misc</option>
-                        <option value="Others">Others</option>
+                        <option value="Fare">Commute Fare</option>
+                        <option value="School">School</option>
+                        <option value="Misc.">Misc.</option>
                     </select>
                 </div>
             </div>
@@ -59,6 +65,14 @@ export default {
                 </div>
                 <div class="col-md-8">
                     <input class="form-control" type="number" required v-model="amount">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="form-label">Date: </label>
+                </div>
+                <div class="col-md-8">
+                    <Datepicker required v-model="date" />
                 </div>
             </div>
             <div class="row">

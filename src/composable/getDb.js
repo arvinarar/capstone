@@ -4,7 +4,6 @@ const getDb = () => {
     const thismonthsexpenses = ref(0)
     const thisweeksexpenses = ref(0)
     const lastmonthsexpenses = ref(0)
-    const calculatedExpense = ref([])
     const expenses = ref([])
     const error = ref(null)
 
@@ -18,12 +17,14 @@ const getDb = () => {
         expenses.value.sort((a,b) => new Date(b.date) - new Date(a.date))
 
         //Get this week
-        var curr = new Date;
+        var curr = new Date();
+        curr.setHours(0,0,0,0)
         var first = curr.getDate() - curr.getDay();
         var last = first + 6;
 
         var firstday = new Date(curr.setDate(first))
         var lastday = new Date(curr.setDate(last))
+        lastday.setHours(23,59,59,999)
 
         const thisweek = expenses.value.filter(expense => 
           (new Date(expense.date) >= firstday) && 
@@ -37,6 +38,7 @@ const getDb = () => {
         //Get this month
         firstday = new Date(curr.getFullYear(), curr.getMonth(), 1)
         lastday = new Date(curr.getFullYear(), curr.getMonth() + 1, 0)
+        lastday.setHours(23,59,59,999)
         
         const thismonth = expenses.value.filter(expense => 
           (new Date(expense.date) >= firstday) && 
@@ -50,6 +52,7 @@ const getDb = () => {
         //Get last month
         firstday = new Date(curr.getFullYear(), curr.getMonth() -1, 1)
         lastday = new Date(curr.getFullYear(), curr.getMonth(), 0)
+        lastday.setHours(23,59,59,999)
 
         const lastmonth = expenses.value.filter(expense => 
           (new Date(expense.date) >= firstday) && 

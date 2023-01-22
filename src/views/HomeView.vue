@@ -1,11 +1,12 @@
 <script>
+import getDb from '../composable/getDb'
+
 export default {
   setup() {
-    let thisWeeksExpenses = 200;
-    let thisMonthsExpenses = 1235;
-    let lastMonthsExpenses = 1152;
+    const { expenses, error, thismonthsexpenses, thisweeksexpenses, lastmonthsexpenses,load } = getDb()
+    load()
 
-    return { thisWeeksExpenses, thisMonthsExpenses, lastMonthsExpenses }
+    return { expenses, thismonthsexpenses, thisweeksexpenses, lastmonthsexpenses, error }
   }
 }
 </script>
@@ -14,14 +15,16 @@ export default {
   <div class="container">
     <div class="row">
       <div class="col">
-        <h3 class="textcenter">This Weeks Expenses: {{ thisWeeksExpenses }}</h3>
-        <h3 class="textcenter">This Months Expenses: {{ thisMonthsExpenses }}</h3>
-        <h3 class="textcenter">Last Weeks Expenses: {{ lastMonthsExpenses }}</h3>
+        <h3 class="textcenter">This Weeks Expenses: {{ thisweeksexpenses }}</h3>
+        <h3 class="textcenter">This Months Expenses: {{ thismonthsexpenses }}</h3>
+        <h3 class="textcenter">Last Weeks Expenses: {{ lastmonthsexpenses }}</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-auto m-auto p-auto">
-        <button id="button" type="button" class="btn">Show Financial Report</button>
+        <button id="button" type="button" class="btn">
+          <RouterLink to="/FinancialStatement">Show Financial Report</RouterLink>
+        </button>
       </div>
       <div class="col-auto m-auto p-auto">
         <button id="button" type="button" class="btn">
