@@ -71,6 +71,30 @@
       "dateString": "1/22/2023",
       "amount": 7,
       "id": 9
+    },
+    {
+      "name": "Manok",
+      "type": "Food",
+      "date": "2023-01-23T01:57:48.128Z",
+      "dateString": "1/23/2023",
+      "amount": 500,
+      "id": 10
+    },
+    {
+      "name": "dsad",
+      "type": "Misc.",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 100,
+      "id": 11
+    },
+    {
+      "name": "asfaswevrv dfadf",
+      "type": "Food",
+      "date": "2022-12-30T16:00:00.000Z",
+      "dateString": "12/31/2022",
+      "amount": 200,
+      "id": 12
     }
   ]
 }
