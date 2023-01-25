@@ -38,6 +38,10 @@ export default {
 </template>
 
 <style lang="scss" scope>
+body {
+  min-height: 100vh;
+  display: flex;
+}
 
   #button {
     border-radius: 10px;

@@ -95,6 +95,30 @@
       "dateString": "12/31/2022",
       "amount": 200,
       "id": 12
+    },
+    {
+      "name": "Dingdong",
+      "type": "Food",
+      "date": "2023-01-24T06:34:20.816Z",
+      "dateString": "1/24/2023",
+      "amount": 15,
+      "id": 13
+    },
+    {
+      "name": "asdasd",
+      "type": "Fare",
+      "date": "2023-01-24T08:06:59.630Z",
+      "dateString": "1/24/2023",
+      "amount": 122,
+      "id": 14
+    },
+    {
+      "name": "qrqer",
+      "type": "Fare",
+      "date": "2023-01-25T02:30:27.894Z",
+      "dateString": "1/25/2023",
+      "amount": 50,
+      "id": 15
     }
   ]
 }

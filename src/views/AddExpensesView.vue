@@ -75,8 +75,13 @@ export default {
                     <Datepicker required v-model="date" />
                 </div>
             </div>
-            <div class="row">
-                <div class="col d-flex justify-content-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                    <button id="button" type="button" class="btn">
+                        <RouterLink to="/">Back</RouterLink>
+                    </button>
+                </div>
+                <div class="col-auto">
                     <button id="button" type="submit" class="btn">
                         Add
                     </button>
@@ -87,6 +92,11 @@ export default {
 </template>
 
 <style lang="scss" scope>
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
   .form-control:focus {
     border-color: #747AB3;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(116, 122, 179, 0.6);
