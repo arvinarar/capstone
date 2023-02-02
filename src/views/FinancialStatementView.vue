@@ -3,30 +3,54 @@ import getDb from "../composable/getFinancialStatement";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
 import { Pie } from "vue-chartjs";
 import { onMounted } from "vue";
+import { ref } from "vue";
 
 ChartJS.register(ArcElement, Tooltip);
 
-const { expenses, week1, week2, week3, week4, week5, error, test, load } =
+const { expenses, month, week1, week2, week3, week4, week5, error, load } =
   getDb();
 
-onMounted(() => {
-  load();
-});
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-const data = {
-  labels: ["Rent/Bills", "Food", "Commute Fare", "School", "Misc."],
-  datasets: [
-    {
-      backgroundColor: ["#472EA3", "#5E3FBE", "#A88DEB", "#E5DAFB", "#F4F0FD"],
-      data: [12, 12, 12, 12, 12],
-    },
-  ],
-};
+const offset = ref(0);
+const currentMonth = ref((new Date().getMonth() + offset.value) % 12);
+
+var render = false;
+onMounted(() => {
+  load(offset.value);
+  render = true;
+});
 
 const options = {
   responsive: true,
   maintainAspectRatio: true,
 };
+
+function changeMonth(x) {
+  if (x == 0) {
+    offset.value--;
+    if (currentMonth.value == 0) currentMonth.value = 11;
+    else currentMonth.value--;
+  } else {
+    offset.value++;
+    if (currentMonth.value == 11) currentMonth.value = 0;
+    else currentMonth.value++;
+  }
+  load(offset.value);
+}
 </script>
 
 <template>
@@ -38,32 +62,32 @@ const options = {
     </div>
     <div class="row d-none d-md-flex mb-5 paginator justify-content-center">
       <div class="col-auto">
-        <button id="button" type="button" class="btn">
+        <button id="button" type="button" class="btn" @click="changeMonth(0)">
           &lt;&lt; Previous Month
         </button>
       </div>
       <div class="col-auto">
-        <h5>Showing the Financial Report of May</h5>
+        <h5>Showing the Financial Report of {{ monthNames[currentMonth] }}</h5>
       </div>
       <div class="col-auto">
-        <button id="button" type="button" class="btn">
+        <button id="button" type="button" class="btn" @click="changeMonth(1)">
           Next Month &#62;&#62;
         </button>
       </div>
     </div>
     <div class="row d-md-none">
       <div class="col textcenter paginator">
-        <h5>Showing the Financial Report of May</h5>
+        <h5>Showing the Financial Report of {{ monthNames[currentMonth] }}</h5>
       </div>
     </div>
     <div class="row d-md-none d-flex justify-content-between mb-5">
       <div class="col-auto">
-        <button id="button" type="button" class="btn">
+        <button id="button" type="button" class="btn" @click="changeMonth(0)">
           &lt;&lt; Previous Month
         </button>
       </div>
       <div class="col-auto">
-        <button id="button" type="button" class="btn">
+        <button id="button" type="button" class="btn" @click="changeMonth(1)">
           Next Month &#62;&#62;
         </button>
       </div>
@@ -92,30 +116,30 @@ const options = {
       <div class="col-12 col-lg-6">
         <div class="row mx-auto mt-5">
           <div class="col-auto mx-auto">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="month" :options="options" />
           </div>
         </div>
         <div class="row mx-auto mt-5 d-flex justify-content-around">
           <div class="col-3">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="week1" :options="options" />
             <p class="textcenter notsoBold">Week1</p>
           </div>
           <div class="col-3">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="week2" :options="options" />
             <p class="textcenter notsoBold">Week2</p>
           </div>
           <div class="col-3">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="week3" :options="options" />
             <p class="textcenter notsoBold">Week3</p>
           </div>
         </div>
         <div class="row mx-auto mt-2 d-flex justify-content-center">
           <div class="col-3 me-5">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="week4" :options="options" />
             <p class="textcenter notsoBold">Week4</p>
           </div>
           <div class="col-3">
-            <Pie :data="data" :options="options" />
+            <Pie v-if="render" :data="week5" :options="options" />
             <p class="textcenter notsoBold">Week5</p>
           </div>
         </div>
@@ -168,7 +192,7 @@ a {
 }
 
 .table-wrapper {
-  max-height: 80vh;
+  max-height: 75vh;
   overflow: auto;
   display: inline-block;
 }
@@ -181,8 +205,8 @@ a {
 .Theader {
   background-color: #6167a9;
   color: #ffffff;
-  border-width: 2px;
-  border-color: black;
+  border-width: 2px !important;
+  border-color: black !important;
 }
 
 .table {

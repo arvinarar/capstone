@@ -1,9 +1,9 @@
 import { ref } from "vue";
 
 const getDb = () => {
-  const thismonthsexpenses = ref(0);
-  const thisweeksexpenses = ref(0);
-  const lastmonthsexpenses = ref(0);
+  const thisMonthsExpenses = ref(0);
+  const thisWeeksExpenses = ref(0);
+  const lastMonthsExpenses = ref(0);
   const expenses = ref([]);
   const error = ref(null);
 
@@ -17,12 +17,15 @@ const getDb = () => {
       expenses.value.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       //Get this week
-      var curr = new Date();
-      curr.setHours(0, 0, 0, 0);
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      var curr = new Date(today);
       var first = curr.getDate() - curr.getDay();
       var last = first + 6;
 
       var firstday = new Date(curr.setDate(first));
+      curr = new Date(today);
       var lastday = new Date(curr.setDate(last));
       lastday.setHours(23, 59, 59, 999);
 
@@ -32,14 +35,14 @@ const getDb = () => {
           new Date(expense.date) <= lastday
       );
 
-      thisweeksexpenses.value = thisweek.reduce((accummulator, object) => {
+      thisWeeksExpenses.value = thisweek.reduce((accummulator, object) => {
         return accummulator + object.amount;
       }, 0);
       //-- --//
 
       //Get this month
-      firstday = new Date(curr.getFullYear(), curr.getMonth(), 1);
-      lastday = new Date(curr.getFullYear(), curr.getMonth() + 1, 0);
+      firstday = new Date(today.getFullYear(), today.getMonth(), 1);
+      lastday = new Date(today.getFullYear(), today.getMonth() + 1, 0);
       lastday.setHours(23, 59, 59, 999);
 
       const thismonth = expenses.value.filter(
@@ -48,14 +51,14 @@ const getDb = () => {
           new Date(expense.date) <= lastday
       );
 
-      thismonthsexpenses.value = thismonth.reduce((accummulator, object) => {
+      thisMonthsExpenses.value = thismonth.reduce((accummulator, object) => {
         return accummulator + object.amount;
       }, 0);
       //-- --//
 
       //Get last month
-      firstday = new Date(curr.getFullYear(), curr.getMonth() - 1, 1);
-      lastday = new Date(curr.getFullYear(), curr.getMonth(), 0);
+      firstday = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+      lastday = new Date(today.getFullYear(), today.getMonth(), 0);
       lastday.setHours(23, 59, 59, 999);
 
       const lastmonth = expenses.value.filter(
@@ -64,7 +67,7 @@ const getDb = () => {
           new Date(expense.date) <= lastday
       );
 
-      lastmonthsexpenses.value = lastmonth.reduce((accummulator, object) => {
+      lastMonthsExpenses.value = lastmonth.reduce((accummulator, object) => {
         return accummulator + object.amount;
       }, 0);
       //-- --//
@@ -77,9 +80,9 @@ const getDb = () => {
   return {
     expenses,
     error,
-    thismonthsexpenses,
-    thisweeksexpenses,
-    lastmonthsexpenses,
+    thisMonthsExpenses,
+    thisWeeksExpenses,
+    lastMonthsExpenses,
     load,
   };
 };

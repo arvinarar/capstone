@@ -1,124 +1,516 @@
 {
   "expenses": [
     {
-      "name": "Fofo",
-      "type": "Misc.",
-      "date": "2023-01-22T11:05:26.065Z",
-      "dateString": "1/22/2023",
-      "amount": 200,
+      "name": "asdasd",
+      "type": "Rent",
+      "date": "2023-02-02T03:47:21.255Z",
+      "dateString": "2/2/2023",
+      "amount": 2000,
       "id": 1
     },
     {
-      "name": "Hart",
-      "type": "Food",
-      "date": "2023-01-28T16:00:00.000Z",
-      "dateString": "1/29/2023",
-      "amount": 20,
+      "name": "Tomahwak",
+      "type": "Misc.",
+      "date": "2023-02-19T16:00:00.000Z",
+      "dateString": "2/20/2023",
+      "amount": 120,
       "id": 2
     },
     {
-      "name": "Bopis",
-      "type": "Food",
-      "date": "2023-01-22T16:00:00.000Z",
-      "dateString": "1/23/2023",
-      "amount": 50,
+      "name": "isda",
+      "type": "Rent",
+      "date": "2023-02-25T16:00:00.000Z",
+      "dateString": "2/26/2023",
+      "amount": 20,
       "id": 3
     },
     {
-      "name": "Bopis",
-      "type": "Food",
-      "date": "2023-01-23T16:00:00.000Z",
-      "dateString": "1/24/2023",
+      "name": "fish",
+      "type": "Rent",
+      "date": "2023-02-24T16:00:00.000Z",
+      "dateString": "2/25/2023",
       "amount": 50,
       "id": 4
     },
     {
-      "name": "Bopis",
+      "name": "Caldereta",
       "type": "Food",
-      "date": "2023-01-27T16:00:00.000Z",
-      "dateString": "1/28/2023",
-      "amount": 50,
+      "date": "2023-02-02T04:01:17.169Z",
+      "dateString": "2/2/2023",
+      "amount": 250,
       "id": 5
     },
     {
-      "name": "Fireworks",
-      "type": "Misc.",
-      "date": "2022-12-30T16:00:00.000Z",
-      "dateString": "12/31/2022",
-      "amount": 500,
+      "name": "REnt",
+      "type": "Rent",
+      "date": "2023-01-30T16:00:00.000Z",
+      "dateString": "1/31/2023",
+      "amount": 1100,
       "id": 6
     },
     {
-      "name": "Hart",
+      "name": "asd",
       "type": "Rent",
-      "date": "2023-01-22T11:21:46.904Z",
-      "dateString": "1/22/2023",
-      "amount": 1000,
+      "date": "2023-02-07T16:00:00.000Z",
+      "dateString": "2/8/2023",
+      "amount": 20,
       "id": 7
     },
     {
-      "name": "Habal-Habal",
-      "type": "Fare",
-      "date": "2023-01-22T11:32:39.774Z",
-      "dateString": "1/22/2023",
+      "name": "asd",
+      "type": "Food",
+      "date": "2023-02-07T16:00:00.000Z",
+      "dateString": "2/8/2023",
       "amount": 20,
       "id": 8
     },
     {
-      "name": "Ballpen",
-      "type": "School",
-      "date": "2023-01-22T11:33:01.285Z",
-      "dateString": "1/22/2023",
-      "amount": 7,
+      "name": "asd",
+      "type": "Fare",
+      "date": "2023-02-07T16:00:00.000Z",
+      "dateString": "2/8/2023",
+      "amount": 20,
       "id": 9
     },
     {
-      "name": "Manok",
-      "type": "Food",
-      "date": "2023-01-23T01:57:48.128Z",
-      "dateString": "1/23/2023",
-      "amount": 500,
+      "name": "asd",
+      "type": "School",
+      "date": "2023-02-07T16:00:00.000Z",
+      "dateString": "2/8/2023",
+      "amount": 20,
       "id": 10
     },
     {
-      "name": "dsad",
+      "name": "asd",
       "type": "Misc.",
-      "date": "2022-12-15T16:00:00.000Z",
-      "dateString": "12/16/2022",
-      "amount": 100,
+      "date": "2023-02-07T16:00:00.000Z",
+      "dateString": "2/8/2023",
+      "amount": 20,
       "id": 11
     },
     {
-      "name": "asfaswevrv dfadf",
+      "name": "New Year",
       "type": "Food",
       "date": "2022-12-30T16:00:00.000Z",
       "dateString": "12/31/2022",
-      "amount": 200,
+      "amount": 500,
       "id": 12
     },
     {
-      "name": "Dingdong",
-      "type": "Food",
-      "date": "2023-01-24T06:34:20.816Z",
-      "dateString": "1/24/2023",
-      "amount": 15,
+      "name": "Jan 5th week",
+      "type": "Rent",
+      "date": "2023-01-25T16:00:00.000Z",
+      "dateString": "1/26/2023",
+      "amount": 58,
       "id": 13
     },
     {
-      "name": "asdasd",
-      "type": "Fare",
-      "date": "2023-01-24T08:06:59.630Z",
-      "dateString": "1/24/2023",
-      "amount": 122,
+      "name": "Jan 5th week",
+      "type": "Food",
+      "date": "2023-01-25T16:00:00.000Z",
+      "dateString": "1/26/2023",
+      "amount": 43,
       "id": 14
     },
     {
-      "name": "qrqer",
+      "name": "Jan 5th week",
       "type": "Fare",
-      "date": "2023-01-25T02:30:27.894Z",
-      "dateString": "1/25/2023",
-      "amount": 50,
+      "date": "2023-01-25T16:00:00.000Z",
+      "dateString": "1/26/2023",
+      "amount": 52,
       "id": 15
+    },
+    {
+      "name": "Jan 5th week",
+      "type": "School",
+      "date": "2023-01-25T16:00:00.000Z",
+      "dateString": "1/26/2023",
+      "amount": 99,
+      "id": 16
+    },
+    {
+      "name": "Jan 5th week",
+      "type": "Misc.",
+      "date": "2023-01-25T16:00:00.000Z",
+      "dateString": "1/26/2023",
+      "amount": 69,
+      "id": 17
+    },
+    {
+      "name": "Jan 4th week",
+      "type": "Rent",
+      "date": "2023-01-18T16:00:00.000Z",
+      "dateString": "1/19/2023",
+      "amount": 107,
+      "id": 18
+    },
+    {
+      "name": "Jan 4th week",
+      "type": "Food",
+      "date": "2023-01-18T16:00:00.000Z",
+      "dateString": "1/19/2023",
+      "amount": 118,
+      "id": 19
+    },
+    {
+      "name": "Jan 4th week",
+      "type": "Fare",
+      "date": "2023-01-18T16:00:00.000Z",
+      "dateString": "1/19/2023",
+      "amount": 125,
+      "id": 20
+    },
+    {
+      "name": "Jan 4th week",
+      "type": "School",
+      "date": "2023-01-18T16:00:00.000Z",
+      "dateString": "1/19/2023",
+      "amount": 115,
+      "id": 21
+    },
+    {
+      "name": "Jan 4th week",
+      "type": "Misc.",
+      "date": "2023-01-18T16:00:00.000Z",
+      "dateString": "1/19/2023",
+      "amount": 99,
+      "id": 22
+    },
+    {
+      "name": "Jan 3rd week",
+      "type": "Rent",
+      "date": "2023-01-11T16:00:00.000Z",
+      "dateString": "1/12/2023",
+      "amount": 100,
+      "id": 23
+    },
+    {
+      "name": "Jan 3rd week",
+      "type": "Food",
+      "date": "2023-01-11T16:00:00.000Z",
+      "dateString": "1/12/2023",
+      "amount": 61,
+      "id": 24
+    },
+    {
+      "name": "Jan 3rd week",
+      "type": "Fare",
+      "date": "2023-01-11T16:00:00.000Z",
+      "dateString": "1/12/2023",
+      "amount": 88,
+      "id": 25
+    },
+    {
+      "name": "Jan 3rd week",
+      "type": "School",
+      "date": "2023-01-11T16:00:00.000Z",
+      "dateString": "1/12/2023",
+      "amount": 92,
+      "id": 26
+    },
+    {
+      "name": "Jan 3rd week",
+      "type": "Misc.",
+      "date": "2023-01-11T16:00:00.000Z",
+      "dateString": "1/12/2023",
+      "amount": 134,
+      "id": 27
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "Rent",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 135,
+      "id": 28
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "Food",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 138,
+      "id": 29
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "Fare",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 72,
+      "id": 30
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "School",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 60,
+      "id": 31
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "School",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 60,
+      "id": 32
+    },
+    {
+      "name": "Jan 2nd week",
+      "type": "Misc.",
+      "date": "2023-01-04T16:00:00.000Z",
+      "dateString": "1/5/2023",
+      "amount": 135,
+      "id": 33
+    },
+    {
+      "name": "Dec 4th week",
+      "type": "Rent",
+      "date": "2022-12-22T16:00:00.000Z",
+      "dateString": "12/23/2022",
+      "amount": 128,
+      "id": 34
+    },
+    {
+      "name": "Dec 4th week",
+      "type": "Food",
+      "date": "2022-12-22T16:00:00.000Z",
+      "dateString": "12/23/2022",
+      "amount": 81,
+      "id": 35
+    },
+    {
+      "name": "Dec 4th week",
+      "type": "Fare",
+      "date": "2022-12-22T16:00:00.000Z",
+      "dateString": "12/23/2022",
+      "amount": 125,
+      "id": 36
+    },
+    {
+      "name": "Dec 4th week",
+      "type": "School",
+      "date": "2022-12-22T16:00:00.000Z",
+      "dateString": "12/23/2022",
+      "amount": 40,
+      "id": 37
+    },
+    {
+      "name": "Dec 4th week",
+      "type": "Misc.",
+      "date": "2022-12-22T16:00:00.000Z",
+      "dateString": "12/23/2022",
+      "amount": 96,
+      "id": 38
+    },
+    {
+      "name": "Dec 3rd week",
+      "type": "Rent",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 117,
+      "id": 39
+    },
+    {
+      "name": "Dec 3rd week",
+      "type": "Food",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 80,
+      "id": 40
+    },
+    {
+      "name": "Dec 3rd week",
+      "type": "Fare",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 130,
+      "id": 41
+    },
+    {
+      "name": "Dec 3rd week",
+      "type": "School",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 109,
+      "id": 42
+    },
+    {
+      "name": "Dec 3rd week",
+      "type": "Misc.",
+      "date": "2022-12-15T16:00:00.000Z",
+      "dateString": "12/16/2022",
+      "amount": 54,
+      "id": 43
+    },
+    {
+      "name": "Dec 2nd week",
+      "type": "Rent",
+      "date": "2022-12-06T16:00:00.000Z",
+      "dateString": "12/7/2022",
+      "amount": 165,
+      "id": 44
+    },
+    {
+      "name": "Dec 2nd week",
+      "type": "Food",
+      "date": "2022-12-06T16:00:00.000Z",
+      "dateString": "12/7/2022",
+      "amount": 107,
+      "id": 45
+    },
+    {
+      "name": "Dec 2nd week",
+      "type": "Fare",
+      "date": "2022-12-06T16:00:00.000Z",
+      "dateString": "12/7/2022",
+      "amount": 119,
+      "id": 46
+    },
+    {
+      "name": "Dec 2nd week",
+      "type": "School",
+      "date": "2022-12-06T16:00:00.000Z",
+      "dateString": "12/7/2022",
+      "amount": 96,
+      "id": 47
+    },
+    {
+      "name": "Dec 2nd week",
+      "type": "Misc.",
+      "date": "2022-12-06T16:00:00.000Z",
+      "dateString": "12/7/2022",
+      "amount": 123,
+      "id": 48
+    },
+    {
+      "name": "Dec 1st week",
+      "type": "Rent",
+      "date": "2022-11-30T16:00:00.000Z",
+      "dateString": "12/1/2022",
+      "amount": 104,
+      "id": 49
+    },
+    {
+      "name": "Dec 1st week",
+      "type": "Food",
+      "date": "2022-11-30T16:00:00.000Z",
+      "dateString": "12/1/2022",
+      "amount": 132,
+      "id": 50
+    },
+    {
+      "name": "Dec 1st week",
+      "type": "Fare",
+      "date": "2022-11-30T16:00:00.000Z",
+      "dateString": "12/1/2022",
+      "amount": 53,
+      "id": 51
+    },
+    {
+      "name": "Dec 1st week",
+      "type": "School",
+      "date": "2022-11-30T16:00:00.000Z",
+      "dateString": "12/1/2022",
+      "amount": 112,
+      "id": 52
+    },
+    {
+      "name": "Dec 1st week",
+      "type": "Misc.",
+      "date": "2022-11-30T16:00:00.000Z",
+      "dateString": "12/1/2022",
+      "amount": 129,
+      "id": 53
+    },
+    {
+      "name": "Feb 3rd",
+      "type": "Rent",
+      "date": "2023-02-15T16:00:00.000Z",
+      "dateString": "2/16/2023",
+      "amount": 122,
+      "id": 54
+    },
+    {
+      "name": "Feb 3rd",
+      "type": "Food",
+      "date": "2023-02-15T16:00:00.000Z",
+      "dateString": "2/16/2023",
+      "amount": 77,
+      "id": 55
+    },
+    {
+      "name": "Feb 3rd",
+      "type": "Fare",
+      "date": "2023-02-15T16:00:00.000Z",
+      "dateString": "2/16/2023",
+      "amount": 139,
+      "id": 56
+    },
+    {
+      "name": "Feb 3rd",
+      "type": "School",
+      "date": "2023-02-15T16:00:00.000Z",
+      "dateString": "2/16/2023",
+      "amount": 93,
+      "id": 57
+    },
+    {
+      "name": "Feb 3rd",
+      "type": "Misc.",
+      "date": "2023-02-15T16:00:00.000Z",
+      "dateString": "2/16/2023",
+      "amount": 62,
+      "id": 58
+    },
+    {
+      "name": "Feb 4th week",
+      "type": "Rent",
+      "date": "2023-02-21T16:00:00.000Z",
+      "dateString": "2/22/2023",
+      "amount": 197,
+      "id": 59
+    },
+    {
+      "name": "Feb 4th week",
+      "type": "Food",
+      "date": "2023-02-21T16:00:00.000Z",
+      "dateString": "2/22/2023",
+      "amount": 62,
+      "id": 60
+    },
+    {
+      "name": "Feb 4th week",
+      "type": "Fare",
+      "date": "2023-02-21T16:00:00.000Z",
+      "dateString": "2/22/2023",
+      "amount": 58,
+      "id": 61
+    },
+    {
+      "name": "Feb 4th week",
+      "type": "School",
+      "date": "2023-02-21T16:00:00.000Z",
+      "dateString": "2/22/2023",
+      "amount": 106,
+      "id": 62
+    },
+    {
+      "name": "Feb 4th week",
+      "type": "Misc.",
+      "date": "2023-02-21T16:00:00.000Z",
+      "dateString": "2/22/2023",
+      "amount": 50,
+      "id": 63
+    },
+    {
+      "name": "Bopis",
+      "type": "Food",
+      "date": "2022-12-31T16:00:00.000Z",
+      "dateString": "1/1/2023",
+      "amount": 50,
+      "id": 64
     }
   ]
 }

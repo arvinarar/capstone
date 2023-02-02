@@ -6,18 +6,18 @@ export default {
     const {
       expenses,
       error,
-      thismonthsexpenses,
-      thisweeksexpenses,
-      lastmonthsexpenses,
+      thisMonthsExpenses,
+      thisWeeksExpenses,
+      lastMonthsExpenses,
       load,
     } = getDb();
     load();
 
     return {
       expenses,
-      thismonthsexpenses,
-      thisweeksexpenses,
-      lastmonthsexpenses,
+      thisMonthsExpenses,
+      thisWeeksExpenses,
+      lastMonthsExpenses,
       error,
     };
   },
@@ -53,12 +53,12 @@ export default {
     </div>
     <div class="row">
       <div class="col">
-        <h3 class="textcenter">This Weeks Expenses: {{ thisweeksexpenses }}</h3>
+        <h3 class="textcenter">This Weeks Expenses: {{ thisWeeksExpenses }}</h3>
         <h3 class="textcenter">
-          This Months Expenses: {{ thismonthsexpenses }}
+          This Months Expenses: {{ thisMonthsExpenses }}
         </h3>
         <h3 class="textcenter">
-          Last Months Expenses: {{ lastmonthsexpenses }}
+          Last Months Expenses: {{ lastMonthsExpenses }}
         </h3>
       </div>
     </div>
