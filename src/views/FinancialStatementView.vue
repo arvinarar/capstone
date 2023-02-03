@@ -27,6 +27,7 @@ const monthNames = [
 
 const offset = ref(0);
 const currentMonth = ref((new Date().getMonth() + offset.value) % 12);
+const isDisabled = ref(true);
 
 var render = false;
 onMounted(() => {
@@ -50,6 +51,8 @@ function changeMonth(x) {
     else currentMonth.value++;
   }
   load(offset.value);
+  if (offset.value == 0) isDisabled.value = true;
+  else isDisabled.value = false;
 }
 </script>
 
@@ -60,7 +63,7 @@ function changeMonth(x) {
         <h2 class="textcenter">Financial Statement</h2>
       </div>
     </div>
-    <div class="row d-none d-md-flex mb-5 paginator justify-content-center">
+    <div class="row d-none d-lg-flex mb-5 paginator justify-content-center">
       <div class="col-auto">
         <button id="button" type="button" class="btn" @click="changeMonth(0)">
           &lt;&lt; Previous Month
@@ -70,24 +73,36 @@ function changeMonth(x) {
         <h5>Showing the Financial Report of {{ monthNames[currentMonth] }}</h5>
       </div>
       <div class="col-auto">
-        <button id="button" type="button" class="btn" @click="changeMonth(1)">
+        <button
+          :disabled="isDisabled"
+          id="button"
+          type="button"
+          class="btn"
+          @click="changeMonth(1)"
+        >
           Next Month &#62;&#62;
         </button>
       </div>
     </div>
-    <div class="row d-md-none">
+    <div class="row d-lg-none">
       <div class="col textcenter paginator">
         <h5>Showing the Financial Report of {{ monthNames[currentMonth] }}</h5>
       </div>
     </div>
-    <div class="row d-md-none d-flex justify-content-between mb-5">
+    <div class="row d-lg-none d-flex justify-content-between mb-5">
       <div class="col-auto">
         <button id="button" type="button" class="btn" @click="changeMonth(0)">
           &lt;&lt; Previous Month
         </button>
       </div>
       <div class="col-auto">
-        <button id="button" type="button" class="btn" @click="changeMonth(1)">
+        <button
+          :disabled="isDisabled"
+          id="button"
+          type="button"
+          class="btn"
+          @click="changeMonth(1)"
+        >
           Next Month &#62;&#62;
         </button>
       </div>
